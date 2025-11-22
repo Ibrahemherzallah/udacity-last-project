@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "MacBook Pro 16-inch",
+    "price": 2499.99,
+    "description": "Apple MacBook Pro 16-inch with M3 Pro chip, 16GB RAM, 512GB SSD.",
+    "url": "assets/img/macbook16.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Dell XPS 13",
+    "price": 1399.00,
+    "description": "Dell XPS 13 UltraSlim Laptop, Intel i7, 16GB RAM, 512GB SSD.",
+    "url": "assets/img/dellxps132.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Lenovo ThinkPad X1 Carbon",
+    "price": 1699.00,
+    "description": "ThinkPad X1 Carbon Gen 12, i7 Processor, lightweight business laptop.",
+    "url": "assets/img/thinkpadx12.jpg"
+  },
+  {
+    "id": 4,
+    "name": "HP Omen Gaming Laptop",
+    "price": 1899.00,
+    "description": "High-performance HP Omen with RTX 4070, 16GB RAM, and 1TB SSD.",
+    "url": "assets/img/hpomen.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Laptop Cooling Pad",
+    "price": 39.99,
+    "description": "RGB Laptop cooling stand with 6 high-speed fans.",
+    "url": "assets/img/coolingpad.webp"
+  },
+  {
+    "id": 6,
+    "name": "Wireless Laptop Mouse",
+    "price": 25.49,
+    "description": "Silent-click wireless mouse with adjustable DPI for laptops.",
+    "url": "assets/img/laptopmouse.webp"
+  },
+  {
+    "id": 7,
+    "name": "External SSD 1TB",
+    "price": 129.99,
+    "description": "Portable 1TB USB-C External SSD with 1050MB/s speed.",
+    "url": "assets/img/externalssd.webp"
+  },
+  {
+    "id": 8,
+    "name": "USB-C Multiport Adapter",
+    "price": 49.99,
+    "description": "7-in-1 USB-C hub for laptops: HDMI, USB 3.0, SD card, and more.",
+    "url": "assets/img/typecadapter.webp"
+  },
+  {
+    "id": 9,
+    "name": "Laptop Sleeve 15-inch",
+    "price": 19.99,
+    "description": "Waterproof and shockproof laptop sleeve case.",
+    "url": "assets/img/laptopsleeve.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Mechanical Keyboard",
+    "price": 89.00,
+    "description": "Compact mechanical keyboard for laptops with RGB lighting.",
+    "url": "assets/img/mechkeyboard.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Laptop Stand Adjustable",
+    "price": 34.99,
+    "description": "Ergonomic aluminum laptop stand with adjustable height.",
+    "url": "assets/img/laptopstand.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Wireless Headset",
+    "price": 59.99,
+    "description": "Bluetooth wireless headset for work, meetings, and study.",
+    "url": "assets/img/wirelessheadset.webp"
+  }
+]

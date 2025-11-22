@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Products</h2>
+    @if (feedback) {
+    <p class="feedback">{{ feedback }}</p>
+  }
+    <div class="grid">
+    @for (p of products; track p.id) {
+      <app-product-card
+        [product]="p"
+        (add)="handleAdd($event)">
+      </app-product-card>
+    }
+  </div>
+</div>

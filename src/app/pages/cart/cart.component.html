@@ -1,0 +1,60 @@
+<div class="container">
+  @if (feedback) {
+  <div class="feedback">{{ feedback }}</div>
+  }
+  <h2>Your Cart</h2>
+
+  @if (items.length === 0) {
+    <p>Your cart is empty.</p>
+  }
+
+  @if (items.length > 0) {
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th style="width:120px;">Price</th>
+          <th style="width:120px;">Qty</th>
+          <th style="width:120px;">Subtotal</th>
+          <th style="width:80px;"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @for (i of items; track i.product.id) {
+          <tr>
+            <td class="product">
+              <img [src]="i.product.url" [alt]="i.product.name" />
+              <div>
+                <div class="name">{{ i.product.name }}</div>
+                <div class="desc">{{ i.product.description }}</div>
+              </div>
+            </td>
+            <td>${{ i.product.price | number:'1.2-2' }}</td>
+            <td>
+              <input
+                type="number"
+                [(ngModel)]="i.quantity"
+                (ngModelChange)="onQtyChange(i.product.id, $event)"
+                min="1" />
+            </td>
+            <td>${{ (i.product.price * i.quantity) | number:'1.2-2' }}</td>
+            <td><button (click)="remove(i.product.id)">Remove</button></td>
+          </tr>
+        }
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="3" class="right">Total:</td>
+          <td colspan="2"><strong>${{ total | number:'1.2-2' }}</strong></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div class="actions">
+      <button (click)="clear()">Clear Cart</button>
+      <a routerLink="/checkout" class="primary">Proceed to Checkout</a>
+    </div>
+  }
+</div>

@@ -1,0 +1,74 @@
+<div class="container">
+  <h2>Checkout</h2>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(!!f.valid)">
+
+    <label>
+      Full Name
+      <input
+        name="name"
+        [(ngModel)]="model.name"
+        #name="ngModel"
+        required
+        minlength="3"
+        placeholder="User Name" />
+    </label>
+
+    @if (name.invalid && (name.dirty || name.touched || submitted)) {
+      <div class="error">
+        @if (name.errors?.['required']) {
+          <small>Name is required.</small>
+        }
+        @if (name.errors?.['minlength']) {
+          <small>Name must be at least 3 characters.</small>
+        }
+      </div>
+    }
+
+    <label>
+      Address
+      <input
+        name="address"
+        [(ngModel)]="model.address"
+        #address="ngModel"
+        required
+        minlength="6"
+        placeholder="City, Street, Building" />
+    </label>
+
+    @if (address.invalid && (address.dirty || address.touched || submitted)) {
+      <div class="error">
+        @if (address.errors?.['required']) {
+          <small>Address is required.</small>
+        }
+        @if (address.errors?.['minlength']) {
+          <small>Address must be at least 6 characters.</small>
+        }
+      </div>
+    }
+
+    <label>
+      Payment (Card Code)
+      <input
+        name="payment"
+        [(ngModel)]="model.payment"
+        #payment="ngModel"
+        required
+        pattern="^[0-9]{8,}$"
+        placeholder="12345678" />
+    </label>
+
+    @if (payment.invalid && (payment.dirty || payment.touched || submitted)) {
+      <div class="error">
+        @if (payment.errors?.['required']) {
+          <small>Payment number is required.</small>
+        }
+        @if (payment.errors?.['pattern']) {
+          <small>Digits only, min length 8.</small>
+        }
+      </div>
+    }
+
+    <button type="submit">Place Order</button>
+  </form>
+</div>

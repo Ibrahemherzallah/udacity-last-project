@@ -1,0 +1,10 @@
+<nav class="nav">
+  <a routerLink="/" class="brand">My Store</a>
+  <div class="links">
+    <a routerLink="/">Products</a>
+    <a routerLink="/cart" class="cart-link">
+      Cart
+      @if (itemCount > 0) { <span class="badge">{{ itemCount }}</span> }
+    </a>
+  </div>
+</nav>

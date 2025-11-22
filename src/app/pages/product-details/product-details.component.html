@@ -1,0 +1,26 @@
+@if (product) {
+  <div class="container">
+    <div class="details">
+        <img [src]="product.url" [alt]="product.name" />
+        <div class="info">
+            <h2>{{ product.name }}</h2>
+            <p class="price">${{ product.price | number:'1.2-2' }}</p>
+            <p>{{ product.description }}</p>
+            <label>
+                Qty:
+                <input type="number"
+                [(ngModel)]="quantity"
+                (ngModelChange)="onQtyChange($event)"
+                min="1">
+            </label>
+            <div class="actions">
+                <button (click)="add()">Add to Cart</button>
+                <a [routerLink]="['/cart']">Go to Cart</a>
+            </div>
+            @if (feedback) {
+  <p class="feedback">{{ feedback }}</p>
+}
+        </div>
+    </div>
+</div>
+}

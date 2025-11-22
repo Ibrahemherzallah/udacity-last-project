@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Order Confirmation</h2>
+
+  @if (name) {
+    <p>Thanks, <strong>{{ name }}</strong>! Your order has been placed.</p>
+  } @else {
+    <p>Your order has been placed.</p>
+  }
+
+  @if (items.length > 0) {
+    <div>
+      <h3>Summary</h3>
+      <ul>
+        @for (i of items; track i.product.id) {
+          <li>
+            {{ i.quantity }} × {{ i.product.name }} — 
+            ${{ (i.product.price * i.quantity) | number:'1.2-2' }}
+          </li>
+        }
+      </ul>
+
+      <p><strong>Total:</strong> ${{ total | number:'1.2-2' }}</p>
+      <a routerLink="/">Back to Products</a>
+    </div>
+  }
+</div>
